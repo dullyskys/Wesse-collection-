@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Wesse Collection Business Enterprise — From head to toe, we style your confidence. 👕👟">
+  
+  <title>Home | Wesse Collection Business Enterprise</title>
+  <style>
+    /* 🌍 Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: url("https://i.postimg.cc/W4d4593r/tiger-shirt.jpg") center/cover fixed no-repeat;
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden; /* stop sideways scroll */
+}
+
+/* Prevent text from being too wide */
+main, section, header, footer {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+/* Paragraphs */
+p {
+  font-size: 1.2rem;
+  font-family: sans-serif;
+}
+
+/* 🌑 NAVIGATION BAR (Responsive + Fixed) */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  z-index: 1000;
+  flex-wrap: wrap; /* 👈 allows wrapping instead of cutting */
+  box-sizing: border-box;
+}
+
+.navbar h2 {
+  font-size: 1.5rem;
+  color: #ffcc00;
+  white-space: nowrap; /* 👈 keeps title from breaking */
+  margin-right: 20px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap; /* 👈 allow nav links to wrap to next line on small screens */
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  flex: 1;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  white-space: nowrap; /* 👈 stops truncation like "Ab.." */
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #ffcc00;
+  border-bottom: 2px solid #ffcc00;
+  padding-bottom: 2px;
+}
+
+/* Add top space so content isn’t hidden behind fixed navbar */
+body {
+  margin-top: 100px;
+}
+
+/* 🦸 HERO SECTION */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+              url("https://i.postimg.cc/W4d4593r/tiger-shirt.jpg") no-repeat center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 140px 20px 100px;
+  border-radius: 0 0 40px 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.hero h1 {
+  font-size: 2.3rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(255, 204, 0, 0.8), 2px 2px 6px rgba(0,0,0,0.6);
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+  color: #ffcc00;
+  font-weight: 500;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+}
+
+.hero .btn {
+  background-color: #ffcc00;
+  color: #000;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.hero .btn:hover {
+  background-color: #000;
+  color: #ffcc00;
+  border: 2px solid #ffcc00;
+}
+
+/* 🛍️ PRODUCT GALLERY */
+.gallery {
+  text-align: center;
+  margin: 60px 0;
+}
+
+.gallery h2 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.item {
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.item img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.item p {
+  margin-top: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #000;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.item:hover p {
+  color: #ffcc00;
+  transform: scale(1.05);
+}
+
+/* 🖤 FOOTER */
+.footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+  border-top: 3px solid #ffcc00;
+  margin-top: 60px;
+}
+
+.footer p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+.footer a {
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer .designer {
+  color: #00ffcc;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.footer p:last-child {
+  margin-top: 20px;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+@media (max-width: 700px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <h2>Wesse Collection</h2>
+    <ul>
+      <li><a href="wesse.html" class="active">Home</a></li>
+      <li><a href="products.html">Products</r></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Welcome to Wesse Collection Business Enterprise 👕👟</h1>
+    <p>From head to toe — we style your confidence.</p>
+    <a href="products.html" class="btn">Shop Now</a>
+  </header>
+
+  <!-- Product Preview -->
+  <section class="gallery">
+    <h2>Popular Collections</h2>
+    <div class="grid-container">
+      <div class="item">
+        <img src="https://i.postimg.cc/g2SJq9YX/ck-shoe.jpg" alt="Ck black shoes">
+        <p>Nice Shoes</p>
+      </div>
+      <div class="item">
+        <img src="https://i.postimg.cc/x1T8zjSD/female-output.jpg" alt="Female summer clothes">
+        <p>Summer clothes for females</p>
+      </div>
+      <div class="item">
+        <img src="https://i.postimg.cc/1zb32pn0/BIG-jeans.jpg" alt="Painted BIG jeans">
+        <p>Painted BIG Jeans</p>
+      </div>
+      <div class="item">
+        <img src="https://i.postimg.cc/W4d4593r/tiger-shirt.jpg" alt="Men Shirt">
+        <p>Men Shirt</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+  <p>
+    TikTok: <a href="https://www.tiktok.com/@wesse_collection" target="_blank">@WESSE COLlECTION</a> |
+    Instagram: <a href="https://www.instagram.com/wesse.collection" target="_blank">@wesse.collection</a> |
+    <a href="https://chat.whatsapp.com/DMFRXvOgguRIb4UGF4tp21?mode=ems_wa_t" target="_blank">WhatsApp Us</a>
+  </p>
+  <p>© 2025 Wesse Collection Business Enterprise</p>
+  <p>Design by <span class="designer">Dully The designer</span></p>
+</footer>
+  
+  <script src="js/wesse.js"></script>
+</body>
+</html>

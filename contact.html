@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Wesse Collection — From head to toe, we style your confidence. 👕👟" />
+  <title>Contact | Wesse Collection</title>
+  <style>
+    body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* 👈 allows wrapping on small screens */
+  padding: 15px 20px;
+  background-color: #000;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.navbar h2 {
+  color: #ffcc00;
+  letter-spacing: 1px;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+/* 🧭 Navigation Links */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap; /* 👈 makes sure items wrap neatly on small screens */
+  justify-content: center;
+  gap: 20px;
+  margin: 10px 0 0 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.navbar li {
+  display: inline-block;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #ffcc00;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Contact Section */
+.contact {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.contact h1 {
+  font-size: 2rem;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.contact p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: 0.3s;
+  font-family: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #ffcc00;
+  outline: none;
+  box-shadow: 0 0 8px rgba(255, 204, 0, 0.5);
+}
+
+.contact-form button {
+  background-color: #ffcc00;
+  color: #000;
+  border: none;
+  padding: 12px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #000;
+  color: #ffcc00;
+  transform: scale(1.05);
+}
+
+/* Contact Info */
+.contact-info {
+  margin-top: 40px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.contact-info a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 80px;
+  border-top: 3px solid #ffcc00;
+}
+
+.footer a {
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.designer {
+  color: #00ffcc;
+  font-weight: bold;
+}
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar h2 {
+    margin-bottom: 10px;
+  }
+}
+  </style>
+</head>
+
+<body>
+  <!-- 🌟 Navbar -->
+  <nav class="navbar">
+    <h2>Wesse Collection</h2>
+    <ul>
+      <li><a href="wesse.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- 💌 Contact Section -->
+  <section class="contact">
+    <h1>Get in Touch 💬</h1>
+    <p>We’d love to hear from you — send us your thoughts, feedback, or questions anytime!</p>
+
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="contact-info">
+      <p>📞 <strong>Call / WhatsApp:</strong> <a href="https://wa.me/254110653221" target="_blank">0110653221</a></p>
+      <p>📧 <strong>Email:</strong> wesse.collection@gmail.com</p>
+      <p>📍 <strong>Location:</strong> Nairobi, Kenya</p>
+    </div>
+  </section>
+
+  <!-- 🖤 Footer -->
+  <footer class="footer">
+    <p>© 2025 Wesse Collection Business Enterprise</p>
+    <p>
+      Designed by <span class="designer">Dully The Designer</span> 💛 |
+      <a href="https://www.whatsapp.com/business/" target="_blank">WhatsApp Me</a>
+    </p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector(".contact-form");
+  const sendBtn = form.querySelector("button");
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const nameInput = form.querySelector('input[type="text"]').value.trim();
+
+    // Add a quick sending animation
+    sendBtn.disabled = true;
+    const originalText = sendBtn.textContent;
+    sendBtn.textContent = "Sending...";
+
+    // Simulate sending delay (like 2 seconds)
+    setTimeout(() => {
+      alert(
+        nameInput
+          ? `Thank you, ${nameInput}! 💚\nYour message has been received by Wesse Collection.\nWe’ll get back to you soon!`
+          : "Thank you for reaching out to Wesse Collection! 💚\nWe’ll get back to you soon!"
+      );
+
+      form.reset();
+      sendBtn.textContent = originalText;
+      sendBtn.disabled = false;
+    }, 2000);
+  });
+});
+  </script>
+</body>
+</html>

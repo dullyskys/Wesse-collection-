@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products | Wesse Collection</title>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #0d0d0d;
+  color: #fff;
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111;
+  color: white;
+  padding: 15px 40px;
+}
+
+.navbar h2 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #00c3ff;
+  transform: scale(1.1);
+}
+
+.navbar ul li a.active {
+  color: #00c3ff;
+  border-bottom: 2px solid #00c3ff;
+}
+
+/* ===== Header ===== */
+header {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(to right, #000, #1a1a1a);
+  border-bottom: 2px solid gold;
+  animation: fadeIn 1.5s ease;
+}
+
+header h1 {
+  color: gold;
+  text-shadow: 2px 2px 8px rgba(255, 215, 0, 0.6);
+}
+
+header p {
+  color: #ccc;
+}
+
+/* ===== Category ===== */
+.category {
+  margin: 50px auto;
+  width: 90%;
+  max-width: 1100px;
+  text-align: center;
+}
+
+.category h2 {
+  color: gold;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 8px rgba(255, 215, 0, 0.6);
+}
+
+/* ===== Grid ===== */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* ===== Cards ===== */
+.card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 280px;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeUp 1s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.3);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.4s ease;
+}
+
+.card img:hover {
+  transform: scale(1.08);
+}
+
+.card h3 {
+  margin-top: 10px;
+  color: #fff;
+}
+
+.card p {
+  color: #ccc;
+  margin: 8px 0;
+}
+
+/* ===== WhatsApp Button ===== */
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  background: gold;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  animation: glow 2s infinite alternate;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #111;
+  border-top: 2px solid gold;
+  color: #ddd;
+  font-size: 0.9rem;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 5px gold; }
+  to { box-shadow: 0 0 20px gold; }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+  </style>
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar">
+  <h2>Wesse Collection</h2>
+  <br><br>
+  <ul>
+    <li><a href="wesse.html">Home</a></li>
+    <li><a href="products.html" class="active">Products</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+  <header>
+    <h1>🌴 WESSE COLLECTION 🌴</h1>
+    <p>From head to toe — we style your confidence 👕👖👟</p>
+  </header>
+
+  <!-- ===== SHOES ===== -->
+  <section class="category" id="shoes">
+    <h2>🔥 Shoes Collection</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://i.postimg.cc/g2SJq9YX/ck-shoe.jpg" alt="CK Shoes">
+        <h3>CK Shoes</h3>
+        <p>Ksh 4000</p>
+        <a href="https://chat.whatsapp.com/DMFRXvOgguRIb4UGF4tp21?mode=ems_wa_t" target="_blank" class="btn">Buy Now</a>
+      </div>
+
+      <div class="card">
+        <img src="https://i.postimg.cc/g2kjZcb7/plain-airforce.jpg" alt="Airforce Shoes">
+        <h3>Airforce Shoes</h3>
+        <p>Ksh 4000</p>
+        <a href="https://chat.whatsapp.com/DMFRXvOgguRIb4UGF4tp21?mode=ems_wa_t" target="_blank" class="btn">Buy Now</a>
+      </div><br><br>
+
+      <div class="card">
+        <img src="https://i.postimg.cc/ZKL0nB29/j-4.jpg" alt="J-4 shoes">
+        <h3>Nice J4 Shoes</h3>
+        <p class="price">Ksh 4500</p>
+                <a href="https://chat.whatsapp.com/DMFRXvOgguRIb4UGF4tp21?mode=ems_wa_t" target="_blank" class="btn">Buy Now</a>
+      </div><br><br>
+
+      <div class="card">
+        <img src="https://i.postimg.cc/g2kjZcb7/plain-airforce.jpg" alt="Plain Airforce">
+        <h3>Plain Airforce</h3>
+        <p>Ksh 4000</p>
+        <a href="https://chat.whatsapp.com/DMFRXvOgguRIb4UGF4tp21?mode=ems_wa_t" target="_blank" class="btn">Buy Now</a>
+      </div>
+    </div>
+  </section><br> <br>
+
+ <!--Shirt And T-shirt category--->
+    <section class="category">
+      <h2>Nice Shirts And T-shirt</h2>
+      <div class="products">
+        <div class="card">
+       <img src="https://i.postimg.cc/W4d4593r/tiger-shirt.jpg" alt="Tiger-shirt">
+       <h3>Smart T-Shirt</h3>
+       <p class="price">Ksh 400</p>
+       <a href="https://chat.whatsapp.com/DMFRXvOgguRIb4UGF4tp21?mode=ems_wa_t" target="_blank" class="btn">Buy Now</a>
+        </div><br><br>
+        
+      <div class="card">
+      <img src="https://i.postimg.cc/jjDjM853/T-shat.jpg" alt="Shirt">
+      <h3>Smart Shirts</h3>
+      <p class="price">Ksh 450</p>
+      <a href="https://chat.whatsapp.com/DMFRXvOgguRIb4UGF4tp21?mode=ems_wa_t" target="_blank" class="btn">Buy Now</a>
+      </div><br><br><br>
+        
+        <div class="card">
+        <img src="https://i.postimg.cc/4N1ny7qb/flowered-shirt.jpg" alt="Flowered Shirt">
+        <h3>Smart Shirt</h3>
+        <p class="price">Ksh 450</p>
+       <a href="https://chat.whatsapp.com/DMFRXvOgguRIb4UGF4tp21?mode=ems_wa_t" target="_blank" class="btn">Buy Now</a>
+        </div>
+      </div>
+       </section><br><br><br>
+
+  <!-- ===== JEANS ===== -->
+  <section class="category" id="jeans">
+    <h2>🩳 Jeans Collection</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://i.postimg.cc/SR6RWJsh/painted-nba.jpg" alt="Painted Jeans">
+        <h3>Painted NBA Jeans</h3>
+        <p>Ksh 950</p>
+        <a href="https://chat.whatsapp.com/DMFRXvOgguRIb4UGF4tp21?mode=ems_wa_t" target="_blank" class="btn">Buy Now</a>
+      </div><br><br><br>
+
+      <div class="card">
+        <img src="https://i.postimg.cc/vHycGLqB/star-painted-jeans.jpg" alt="Star Jeans">
+        <h3>Star Painted Jeans</h3>
+        <p>Ksh 950</p>
+        <a href="https://chat.whatsapp.com/DMFRXvOgguRIb4UGF4tp21?mode=ems_wa_t" target="_blank" class="btn">Buy Now</a>
+      </div><br><br>
+
+      <div class="card">
+        <img src="https://i.postimg.cc/zfyfxdBC/f-u-jeans.jpg"  alt="F-U Painted Jeans">
+        <h3>Painted F-U Jeans</h3>
+        <p>Ksh 950</p>
+        <a href="https://chat.whatsapp.com/DMFRXvOgguRIb4UGF4tp21?mode=ems_wa_t" class="btn">Buy Now</a>
+      </div>
+    </div>
+  </section><br><br><br>
+
+  <!-- ===== FULL OUTFIT ===== -->
+  <section class="category" id="fulloutfit">
+    <h2>👕 Full Outfit</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://i.postimg.cc/MKwvzbP6/shirt-short.jpg" alt="Shirt and Shorts">
+        <h3>Shirt + Shorts</h3>
+        <p>Ksh 900</p>
+        <a href="" target="_blank" class="btn">Buy Now</a>
+      </div><br><br>
+
+      <div class="card">
+        <img src="https://i.postimg.cc/Hstx2MSp/nice-pair.jpg" alt="plain Shirt and Short">
+        <h3>Flowered Shirt</h3>
+        <p>Ksh 550</p>
+        <a href="https://chat.whatsapp.com/DMFRXvOgguRIb4UGF4tp21?mode=wwt" target="_blank" class="btn">Buy Now</a>
+      </div>
+    </div>
+  </section><br><br><br>
+
+  <footer>
+    <p>📞 0792167980 | 0757904875 | 0105036837</p>
+    <p>🇰🇪 Free delivery anywhere in Kenya 🇰🇪</p>
+    <p>Follow us on TikTok, Facebook & Instagram — <b>WESSE COLLECTION</b></p>
+  </footer>
+
+</body>
+</html>
