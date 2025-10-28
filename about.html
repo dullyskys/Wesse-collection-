@@ -4,7 +4,220 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About — Wesse Collection</title>
-  <link rel="stylesheet" href="about.css">
+  <style>
+    body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in;
+}
+
+/* ===== HEADER ===== */
+header {
+  background-color: #111;
+  color: white;
+  padding: 30px 10px;
+  border-bottom: 2px solid gold;
+}
+
+.logo {
+  width: 140px;
+  height: auto;
+  display: block;
+  margin: 0 auto 15px;
+  transition: transform 0.4s ease, filter 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1) rotate(5deg);
+  filter: drop-shadow(0 0 10px gold);
+}
+
+h1 {
+  font-size: 28px;
+  color: gold;
+  margin: 10px 0;
+  letter-spacing: 1px;
+  animation: fadeSlide 1.2s ease-in-out;
+}
+
+p {
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+/* ===== NAVIGATION ===== */
+nav {
+  margin-top: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+  color: gold;
+  transform: scale(1.1);
+}
+
+nav .active {
+  border-bottom: 2px solid gold;
+}
+
+/* ===== MAIN SECTIONS ===== */
+main {
+  padding: 40px 20px;
+}
+
+.intro h2 {
+  color: gold;
+  font-size: 24px;
+}
+
+.intro p {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.mission-vision {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.card {
+  background-color: #111;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 350px;
+  border: 1px solid gold;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: fadeSlide 1s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 0 20px gold;
+}
+
+.card h3 {
+  color: gold;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+/* ===== JOIN SECTION ===== */
+.join-us {
+  margin-top: 50px;
+  animation: fadeSlide 1.5s ease-in-out;
+}
+
+.join-us h2 {
+  color: gold;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.btn {
+  background-color: gold;
+  color: black;
+  border: none;
+  padding: 12px 25px;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Instagram Button */
+.btn.instagram:hover {
+  background-color: #E1306C;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* TikTok Button */
+.btn.tiktok:hover {
+  background-color: #010101;
+  color: cyan;
+  border: 1px solid cyan;
+  transform: scale(1.1);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #111;
+  padding: 20px;
+  border-top: 2px solid gold;
+  font-size: 14px;
+}
+
+.footer-line {
+  width: 60%;
+  height: 1px;
+  background-color: gold;
+  margin: 15px auto;
+  opacity: 0.5;
+}
+
+
+.credit {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #f5f5f5;
+  text-align: center;
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.7);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+.credit.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.credit span {
+  color: gold;
+}
+
+.credit em strong {
+  font-style: italic;
+  font-weight: bold;
+  color: #ffd700;
+  text-decoration: underline wavy gold;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 8px rgba(255, 215, 0, 0.7); }
+  to { text-shadow: 0 0 20px rgba(255, 255, 255, 1); }
+}
+  </style>
 </head>
 <body>
 
@@ -69,8 +282,17 @@
     <p>🇰🇪 Free delivery across Kenya 🇰🇪</p>
     <p>Follow us: TikTok | Facebook | Instagram — <strong>Wesse Collection</strong></p>
     <div class="footer-line"></div>
-    <p class="credit">Designed by <span>Dully</span> 💻</p>
+    <p class="credit" id="credit">✨ <span>Design by <em><strong>Dully</strong></em></span> 💻</p>
   </footer>
-
+<script>
+  const credit = document.getElementById("credit");
+  window.addEventListener("scroll", () => {
+    const position = credit.getBoundingClientRect().top;
+    const screenHeight = window.innerHeight;
+    if (position < screenHeight - 50) {
+      credit.classList.add("visible");
+    }
+  });
+</script>
 </body>
 </html>
